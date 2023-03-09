@@ -43,5 +43,10 @@ int main (void){
         std::cout << dosyalarinKonumlari[i] << std::endl;
     }
     
+    for (int i = 0; i < dosyaSayisi; i++) { //Bellekten siliyoruz.
+        delete[] dosyaIsimleri[i]; 
+        delete[] dosyalarinKonumlari[i]; 
+    }
+    
     return 0;
 }
