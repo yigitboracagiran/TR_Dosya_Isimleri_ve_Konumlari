@@ -27,7 +27,7 @@ int main (void){
    
     for (const auto & yol : fs::directory_iterator(dosyaYolu)){ 
         dosyaIsimleri[dosyaSayisi] = new char[strlen( yol.path().c_str() ) - strlen(dosyaYolu) + 1];
-        strncpy(dosyaIsimleri[dosyaSayisi], ( yol.path().c_str() + strlen(dosyaYolu) ), ( strlen( yol.path().c_str()) - strlen(dosyaYolu) + 1 ));
+        strncpy(dosyaIsimleri[dosyaSayisi], ( yol.path().c_str() + strlen(dosyaYolu) + 1 ), ( strlen( yol.path().c_str()) - strlen(dosyaYolu) + 1 ));
 
         dosyalarinKonumlari[dosyaSayisi]=new char[strlen( yol.path().c_str() ) + 1];
         strncpy(dosyalarinKonumlari[dosyaSayisi++], ( yol.path().c_str() ), ( strlen( yol.path().c_str()) + 1 )); 
